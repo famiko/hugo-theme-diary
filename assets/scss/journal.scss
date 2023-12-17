@@ -782,15 +782,18 @@ a {
       background: no-repeat center;
       background-size: cover;
       position: relative;
-      padding-top: 140px;
+      aspect-ratio: 16 / 9;
 
       @media screen and (max-width: $single-column-max-width) {
-        padding-top: 120px;
+        aspect-ratio: 16 / 9;
       }
       * {
         color: white;
       }
       .post-title {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
         padding: 80px 35px 30px 35px;
         font-size: $post-title-size;
         font-weight: 600;

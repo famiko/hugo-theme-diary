@@ -12,6 +12,7 @@
                 {{ if $featured_image }}
                     {{ $image := .Resources.GetMatch (.Params.featured_image) }}
                     {{ if $image }}
+                    {{ $image = $image.Fill "1600x900"}}
                     style="background-image: url('{{$image.RelPermalink }}')"
                     {{ else }}
                     style="background-image: url('{{ $featured_image | absURL}}')"
