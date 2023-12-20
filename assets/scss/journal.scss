@@ -782,11 +782,6 @@ a {
       background: no-repeat center;
       background-size: cover;
       position: relative;
-      aspect-ratio: 16 / 9;
-
-      @media screen and (max-width: $single-column-max-width) {
-        aspect-ratio: 16 / 9;
-      }
       * {
         color: white;
       }
@@ -900,7 +895,7 @@ a {
       }
       .post-body {
         font-size: $post-body-size;
-        line-height: 1.5em;
+        line-height: 1.7em;
         * {
           word-wrap: break-word;
         }

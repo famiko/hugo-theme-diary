@@ -22,7 +22,8 @@
                             <div class="post-item-image-wrapper">
                             <div class="post-item-image"
                             {{ if $image }}
-                                {{ $thumbnail := $image.Fill "690x360" }}
+                                {{$process_str := (default "Fill 690x360" .Params.featured_image_thumbnail_process)}}
+                                {{ $thumbnail := $image.Process $process_str }}
                                  style="background-image: url('{{ $thumbnail.RelPermalink }}')"
                             {{ else }}
                             
